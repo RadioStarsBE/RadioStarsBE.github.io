@@ -5,7 +5,7 @@ encoding: "utf-8"
 timezone: Europe/Brussels
 lang: fr
 
-theme: dinky # jekyll-theme-dinky
+theme: jekyll-theme-tactile # jekyll-theme-dinky
 # plugins:
 # gems: Liste des plugins Ruby à activer.
 markdown: kramdown
