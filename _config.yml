@@ -1,10 +1,11 @@
+encoding: "utf-8"
 # title : Le titre de ton site.
 # description : C'est moi
 # url: http://RadioStarsBE.github.io/
 timezone: Europe/Brussels
 lang: fr
 
-# theme: Le thème Jekyll utilisé.
+theme: dinky # jekyll-theme-dinky
 # plugins:
 # gems: Liste des plugins Ruby à activer.
 markdown: kramdown
