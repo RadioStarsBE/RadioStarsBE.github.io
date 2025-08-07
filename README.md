@@ -6,7 +6,6 @@ Radio Stars Website Maintenance
 
 <script>  
   // <!-- JSON "raw" injecté par Liquid dans une variable JS -->
-  
   var data = {{ site.github | jsonify }};
   
   // <!-- Formatter et injecter dans le div -->
