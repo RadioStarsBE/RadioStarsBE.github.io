@@ -1,2 +1,14 @@
+# title : Le titre de ton site.
+# description : C'est moi
+# url: http://RadioStarsBE.github.io/
 timezone: Europe/Brussels
+lang: fr
+
+# theme: Le thème Jekyll utilisé.
+# plugins:
+# gems: Liste des plugins Ruby à activer.
 markdown: kramdown
+# paginate_path: 
+# paginate: Nombre d'articles par page (pour la pagination).
+# include: Liste des fichiers/dossiers à inclure même s'ils sont normalement ignorés.
+# exclude: Liste des fichiers/dossiers à exclure du build.
