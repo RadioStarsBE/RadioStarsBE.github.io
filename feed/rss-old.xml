@@ -1,0 +1,24 @@
+---
+permalink: /rss-old.xml
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="0.91">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <link>{{ site.url }}</link>
+    <description>{{ site.description | xml_escape }}</description>
+    <language>{{ site.language | default: "en-us" }}</language>
+    <copyright>Copyright {{ site.time | date: '%Y' }}</copyright>
+    <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
+    
+    {% for post in site.posts limit:10 %}
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      <link>{{ site.url }}{{ post.url }}</link>
+      <description>{{ post.excerpt | xml_escape }}</description>
+      <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
