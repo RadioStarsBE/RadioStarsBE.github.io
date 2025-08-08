@@ -7,7 +7,7 @@ lang: fr
 
 theme: jekyll-theme-tactile # jekyll-theme-dinky
 # plugins:
-# gems: Liste des plugins Ruby à activer.
+#   - jekyll-feed
 markdown: kramdown
 # paginate_path: 
 # paginate: Nombre d'articles par page (pour la pagination).
