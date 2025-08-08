@@ -8,6 +8,7 @@ lang: fr
 theme: jekyll-theme-tactile # jekyll-theme-dinky
 plugins:
   - jekyll-sitemap
+  - jekyll-email-protect
   - jekyll-timeago
   - jekyll-swfobject
   - jekyll-feed
