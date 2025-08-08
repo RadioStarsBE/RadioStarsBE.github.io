@@ -13,7 +13,8 @@ layout: null
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>{{ page.url | absolute_url | xml_escape }}</id>
   {% assign title = site.title | default: site.name %}
-
+  {% if title %}<title type="html">{{ title | smartify | xml_escape }}</title> {% endif %}
+  {% if site.description %}<subtitle>{{ site.description | xml_escape }}</subtitle>{% endif %}
   {% if page.collection != "posts" %}
     {% assign collection = page.collection | capitalize %}
     {% assign title = title | append: " | " | append: collection %}
@@ -21,14 +22,6 @@ layout: null
   {% if page.category %}
     {% assign category = page.category | capitalize %}
     {% assign title = title | append: " | " | append: category %}
-  {% endif %}
-
-  {% if title %}
-    <title type="html">{{ title | smartify | xml_escape }}</title>
-  {% endif %}
-
-  {% if site.description %}
-    <subtitle>{{ site.description | xml_escape }}</subtitle>
   {% endif %}
 
   {% if site.feed.icon %}
