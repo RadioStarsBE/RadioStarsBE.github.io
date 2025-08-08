@@ -8,7 +8,7 @@ lang: fr
 theme: jekyll-theme-tactile # jekyll-theme-dinky
 plugins:
   - jekyll-feed
-  # - jekyll-sitemap
+  - jekyll-sitemap
 markdown: kramdown
 # paginate_path: 
 # paginate: Nombre d'articles par page (pour la pagination).
