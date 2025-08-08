@@ -64,5 +64,8 @@ layout: null
   {% if page.category %}
     {% assign posts = posts | where: "categories", page.category %}
   {% endif %}
+  {% unless site.show_drafts %}
+    {% assign posts = posts | where_exp: "post", "post.draft != true" %}
+  {% endunless %}
 
 </feed>
