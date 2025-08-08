@@ -13,3 +13,5 @@ markdown: kramdown
 # paginate: Nombre d'articles par page (pour la pagination).
 # include: Liste des fichiers/dossiers à inclure même s'ils sont normalement ignorés.
 # exclude: Liste des fichiers/dossiers à exclure du build.
+feed:
+  path: feed.atom
