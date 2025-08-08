@@ -8,7 +8,7 @@ layout: null
     <title>{{ site.title | xml_escape }}</title>
     <link>{{ site.url }}</link>
     <description>{{ site.description | xml_escape }}</description>
-    <language>{{ site.language | default: "en-us" }}</language>
+    <language>{{ site.lang | default: "en-us" }}</language>
     <copyright>Copyright {{ site.time | date: '%Y' }}</copyright>
     <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
     
