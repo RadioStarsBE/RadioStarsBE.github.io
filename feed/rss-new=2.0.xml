@@ -6,8 +6,10 @@ layout: null
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>{{ site.title | xml_escape }}</title>
-    <link>{{ site.url }}</link>
     <description>{{ site.description | xml_escape }}</description>
+    <copyright>Copyright {{ site.time | date: '%Y' }}</copyright>
+    <language>{{ site.lang | default: "en-us" }}</language>
+    <link>{{ site.url }}</link>
     <atom:link href="{{ site.url }}/rss.xml" rel="self" type="application/rss+xml" title="{{ site.title }} - RSS 2.0" />
     <atom:link href="{{ site.url }}/feed.atom" rel="alternate" type="application/atom+xml" title="{{ site.title }} - Atom Feed" />
     <atom:link href="{{ site.url }}/feed.json" rel="alternate" type="application/json" title="{{ site.title }} - JSON Feed" />
