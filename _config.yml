@@ -8,9 +8,9 @@ lang: fr
 theme: jekyll-theme-tactile # jekyll-theme-dinky
 plugins:
   - jekyll-sitemap
-  - jekyll-email-protect
+  # - jekyll-email-protect
   - jekyll-timeago
-  - jekyll-swfobject
+  # - jekyll-swfobject
   - jekyll-feed
 markdown: kramdown
 # paginate_path: 
