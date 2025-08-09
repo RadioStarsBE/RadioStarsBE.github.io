@@ -11,9 +11,11 @@ layout: null
   <link href="{{ site.url }}" rel="alternate" type="text/html" {% if site.lang %}hreflang="{{ site.lang }}" {% endif %}/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>{{ site.url | append: "feed.atom" | absolute_url | xml_escape }}</id>
-  {% if title %}<title type="html">{{ site.title | smartify | xml_escape }}</title>{% endif %}
-  {% if site.description %}<subtitle>{{ site.description | xml_escape }}</subtitle>{% endif %}
-  {% assign title = site.title | default: site.name %}{% if page.collection != "posts" %}
+  {% assign title = site.title | default: site.name %}{% if title %}
+    <title type="html">{{ site.title | smartify | xml_escape }}</title>{% endif %}
+  {% if site.description %}
+    <subtitle>{{ site.description | xml_escape }}</subtitle>
+  {% endif %}{% if page.collection != "posts" %}
     {% assign collection = page.collection | capitalize %}
     {% assign title = title | append: " | " | append: collection %}
   {% endif %}{% if page.category %}
