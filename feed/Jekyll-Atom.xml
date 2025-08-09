@@ -2,20 +2,16 @@
 permalink: /feed-natif.atom
 layout: null
 ---
-{% assign title = site.title | default: site.name %}
-{% if page.collection != "posts" %}
+<?xml version="1.0" encoding="utf-8"?>
+{% assign title = site.title | default: site.name %}{% if page.xsl %}
+  <?xml-stylesheet type="text/xml" href="{{ '/feed.xslt.xml' | absolute_url }}"?>
+{% endif %}{% if page.collection != "posts" %}
   {% assign collection = page.collection | capitalize %}
   {% assign title = title | append: " | " | append: collection %}
-{% endif %}
-{% if page.category %}
+{% endif %}{% if page.category %}
   {% assign category = page.category | capitalize %}
   {% assign title = title | append: " | " | append: category %}
-{% endif %}
-<?xml version="1.0" encoding="utf-8"?>
-{% if page.xsl %}
-  <?xml-stylesheet type="text/xml" href="{{ '/feed.xslt.xml' | absolute_url }}"?>
-{% endif %}
-<feed xmlns="http://www.w3.org/2005/Atom" {% if site.lang %}xml:lang="{{ site.lang }}"{% endif %}>
+{% endif %}<feed xmlns="http://www.w3.org/2005/Atom" {% if site.lang %}xml:lang="{{ site.lang }}"{% endif %}>
   <generator uri="https://jekyllrb.com/" version="{{ jekyll.version }}">Jekyll</generator>
   <link href="{{ site.url }}feed.atom" rel="self" type="application/atom+xml" />
   <link href="{{ site.url }}" rel="alternate" type="text/html" {% if site.lang %}hreflang="{{ site.lang }}" {% endif %}/>
