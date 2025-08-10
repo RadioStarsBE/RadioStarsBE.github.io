@@ -2,15 +2,26 @@
 permalink: /feed.rss
 layout: null
 ---
-<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="0.91">
+<?xml version="1.0" encoding="UTF-8" ?>{% comment %}
+# Informations #
+- https://www.rssboard.org/rss-0-9-1
+- https://www.tutorialspoint.com/rss/rss0.91-tag-syntax.htm
+{% endcomment %}<rss version="0.91">
   <channel>
     <title>{{ site.title | xml_escape }}</title>
     <description>{{ site.description | xml_escape }}</description>
-    <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
-    <copyright>Copyright {{ site.time | date: '%Y' }}</copyright>
+    <copyright>Copyright {{ site.time | date: '%Y' }} RadioStars.BE</copyright>
     <language>{{ site.lang | default: "en-us" }}</language>
     <link>{{ site.url }}</link>
+    <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>{% comment %}
+    <image>
+      <title>Radio Stars Logo</title>
+      <description>News for web users that write back</description>
+      <url>{{ site.url }}images/mynetscape88.gif</url>
+      <link>{{ site.url }}</link>
+      <width>88</width>
+      <height>31</height>
+    </image>{% endcomment %}
     {% for post in site.posts limit:10 %}
     <item>
       <title>{{ post.title | xml_escape }}</title>
