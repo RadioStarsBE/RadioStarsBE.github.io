@@ -6,7 +6,7 @@ encoding: "utf-8"
 lang: fr
 
 theme: jekyll-theme-tactile # jekyll-theme-dinky
-permalink: /:title/
+permalink: /blog/:year-:month-:day-:title.html
 plugins:
   # - jekyll-github-metadata
   - jekyll-sitemap
