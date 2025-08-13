@@ -10,7 +10,7 @@ Radio Stars Website Maintenance
 <div id="GitHubJSON" style="white-space: pre; font-family: monospace; background:#f0f0f0; padding:1em; border-radius:5px;"></div>  
 <script>  
   // <!-- JSON "raw" injecté par Liquid dans une variable JS -->
-  var data01 = {{ site | jsonify }};
+  var data01 = {{ site.posts | jsonify }};
   var data02 = {{ site.github | jsonify }};
 
   // <!-- Formatter et injecter dans le div -->
