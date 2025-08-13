@@ -7,6 +7,7 @@ lang: fr
 
 theme: jekyll-theme-tactile # jekyll-theme-dinky
 plugins:
+  # - jekyll-github-metadata
   - jekyll-sitemap
   # - jekyll-email-protect
   - jekyll-timeago
