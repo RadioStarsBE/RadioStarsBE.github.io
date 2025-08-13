@@ -2,16 +2,16 @@
 Radio Stars Website Maintenance
 
 ## Contact ##
-<a href="mailto:{{ 'example@example.com' | encode_email }}" title="Contact me">Contact me</a>
+[Contact me](mailto:{{ 'example@example.com' | encode_email }} "Contact me")
 
 ## Info ##
 
 {% for post in site.posts %}
-  <P>Title : {{ post.title | xml_escape }}<br />
-  <div>Link : <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ site.url }}{{ site.baseurl }}{{ post.url }}</a></div>
-  <div>ID : {{ site.url }}{{ site.baseurl }}{{ post.id }}</dic>
-  <div>Update : {{ post.date | date_to_xmlschema }}</div>
-  <div>summary : {{ post.excerpt | xml_escape }}</div></P>
+  Title : {{ post.title | xml_escape }}  
+  Link : [{{ site.url }}{{ site.baseurl }}{{ post.url }}]({{ site.url }}{{ site.baseurl }}{{ post.url }})  
+  ID : {{ site.url }}{{ site.baseurl }}{{ post.id }}  
+  Update : {{ post.date | date_to_xmlschema }}  
+  summary : {{ post.excerpt | xml_escape }}  
 {% endfor %}
 
 <div id="GitHubJSON" style="white-space: pre; font-family: monospace; background:#f0f0f0; padding:1em; border-radius:5px;"></div>  
